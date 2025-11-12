@@ -1,0 +1,320 @@
+
+/*remove all the margins so I can adjust the box sizing later on */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+ /*smooth scrolling*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Roboto Condensed font is the main font, from Google Fonts*/
+body { 
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto; /*Responsive Font Adjuster*/
+}
+
+/*Header Section*/
+
+ /* Centralizes the container e create space within the elemnt*/
+header {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 230px 20px;
+    overflow: hidden; /*Optional design, makes the header mix better with top and bottom*/
+}
+
+/* With this chunk we're able to manipulate the background image, and layer it as I want*/
+
+header::before { /*Added to make image a background without mixing it up with the class header*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('Image/headerimage.jpg') no-repeat center center;
+    filter: blur(4px);
+    background-size: cover;
+    z-index: -1;
+}
+
+/*General Typography configuration*/ 
+
+h1{
+    color: aliceblue;
+    text-shadow: 1px 1px 2px #000000;
+    margin-top: 0px;
+
+    text-transform: uppercase;
+}
+
+h2{
+    text-shadow: 0.5px 0.5px 1px #212121;
+    font-size: small;
+    color: aliceblue;
+}
+
+h3.ddescription { 
+    margin-top: 0;
+    font-size: medium;
+    margin-bottom: 2px;
+}
+
+h3 {font-weight: bold;
+color: #212121;}
+
+h4 {font-size: medium;
+font-weight: bold;}
+
+/*UPPERCASE DESTIONATION HEADER*/
+
+.destinations {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311; /*Defines a new variation for the font, wght = weight*/
+    margin-bottom: 0.8rem;
+    color: #212121;
+    outline: none;
+    text-align: start;
+    font-weight: bolder;
+}
+
+
+
+/*Navigation Style*/
+
+
+/*Navigation bar bg color*/
+.custom-navbar {
+    background-color: #111;
+}
+
+/*TravelMates logo color*/
+.navbar-brand {
+    color: black;
+}
+
+/*Links in the navbar */
+
+.nav-link {
+    color: #000 !important;
+    margin-right: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+    text-decoration: underline;
+}
+
+.contact-link {
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.contact-link:hover {
+    border-color: #fff;
+}
+
+/*Discover your next adventure button styling*/
+
+.start-btn {
+    background-color: #999999;
+    color: #fff !important;
+    font-weight: 100;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    box-shadow: 3px 3px 0 rgb(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    border:none;
+    transition: all 0.2 ease;
+}
+
+.start-btn:hover {
+    background-color: #000;
+    color: #ffffff !important;
+    font-weight: 100;
+    border-radius: 6px;
+    padding: 0.6 rem 1rem;
+    box-shadow: 3px 3px 0 rgb(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    border:none;
+    transition: all 1s ease;
+}
+
+.hero-btn {
+    background-color: #999999;
+    color: #fff !important;
+    font-weight: 100;
+    border-radius: 6px;
+    padding: 0.6 rem 1rem;
+    box-shadow: 3px 3px 0 rgb(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    border: 2px #212121;
+    transition: all 1s ease;
+}
+
+
+/*Destination Section (CARDS)*/
+
+.card {
+  max-width: 400px;
+  border-radius: 0.5rem;
+  background-color: #d9d9d9;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+/*Card content padding */
+
+.content {
+  padding: 18px;
+}
+
+/* Container for image and overlay text*/
+
+.img-container{
+    position: relative;
+
+}
+.img-card {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    filter: blur(1px);
+    transform: scale(1); /*regular scale*/
+    overflow: hidden;
+}
+
+.img-card:hover {
+filter: blur(0px);
+transition: 0.5s;
+scale: 1.1; /*Makes the card pop up in the hover*/
+}
+
+.overlay-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 1px 1px 5px #212121;
+}
+
+/*card title*/
+
+.title {
+  color: #111827;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+/*h1, h2, h3 specific for the cards*/
+
+.title h1 {
+    font-size: 50px;
+    color: #f1f1f1;
+    text-shadow: 0px 0px 2px;
+}
+
+.title h2 {
+    text-shadow: 1px 1px 2px #212121;
+    color: white;
+}
+
+.title h3{
+    font-size: xx-large;
+    color: #ffeded;
+    font-weight: bold;
+}
+
+/*Description configuration*/
+
+.desc {
+  margin-top: 0.5rem;
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Action button inside cards */
+
+.action {
+  display: inline-flex;
+  margin-top: 0.8rem;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: #585858;
+  padding: 4px 8px;
+  border-radius: 7px;
+}
+
+/*Smooth hover animation & style*/ 
+
+.action span {
+  transition: .3s ease;
+}
+
+.action:hover {
+background-color: rgb(255, 255, 255);
+color: black;
+padding: 8px 16px;
+box-shadow: 0px 3px 5px #212121;
+transition: 0.5s ease;
+}
+
+.destinationstitle{
+    color: #212121;
+    font-size: 70px;
+    text-align: center;
+}
+
+
+.destinationsdetails{
+    color: #464646;
+    
+}
+
+/*Footer*/
+footer {
+    font-size: small;
+    background-color: #f9f9f9;
+    
+}
+
+
+.footer-img {
+    position: flex;
+    justify-content: center;
+}
+
+.footer-img:hover {
+    filter: invert();
+    transition: 0.5s;
+}
+
+.text-class {
+    font-size: small;
+    justify-content: center;
+}
+
